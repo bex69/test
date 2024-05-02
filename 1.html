@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Image and Text Display</title>
+<style>
+    body {
+        margin: 0;
+        height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: black;
+        color: gold; /* Sets text color to gold */
+    }
+    #container {
+        display: flex;
+        width: 90%; /* Adjusts the width of the container */
+        max-width: 1200px; /* Maximum width of the container */
+        height: 80vh; /* Adjusts the height of the container */
+    }
+    #textSide {
+        flex: 1;
+        font-size: 24px;
+        padding-right: 20px; /* Adds spacing between text and image */
+    }
+    #imageSide {
+        flex: 1;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    img {
+        max-width: 100%;
+        max-height: 100%;
+    }
+    #nextButton {
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        padding: 10px 20px;
+        font-size: 16px;
+        cursor: pointer;
+    }
+</style>
+</head>
+<body>
+
+<div id="container">
+    <div id="textSide">
+        Suspension is a captivating practice where individuals hang themselves off the ground for various reasons. Some suspend just to prove they can. They want to push their bodies to the edge and over and see exactly how much their body and mind can endure. Some suspend for fun, because soaring and flying under your own volition can be the most blissful, most magical experience. Because their happy place is with their feet off the ground. Some suspend for entertainment, for a show or an event. The rush of the crowd cheering you on, feeling like superman as you soar and swing. Some suspend for art. To use their own bodies, their own blood and emotions and experience to create profound pieces of performance art, photographs, or videos. To use their bodies to explore concepts of love, hate, life, gender, sexuality, suffering, and many more. Some suspend to feel something. Maybe it’s to replace the pain of chronic illness, to process the loss of a loved one, or to deal with life’s uncertainty. Whatever the reason, the sensation of suspension replaces the other sensations or lack there of, and offers those people some moments of solace and peace. 
+    </div>
+    <div id="imageSide">
+        <img src="image2.png" alt="Descriptive Alt Text">
+    </div>
+</div>
+
+<button id="nextButton">Next</button>
+
+<script>
+    const nextButton = document.getElementById('nextButton');
+    nextButton.onclick = function() {
+        window.location.href = '2.html'; // Replace 'nextpage.html' with your actual next page
+    };
+</script>
+
+</body>
+</html>

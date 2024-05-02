@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Video Player</title>
+<style>
+    body {
+        margin: 0;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: black;
+        position: relative; /* Allows absolute positioning within */
+    }
+    #title {
+        position: absolute;
+        top: 0;
+        width: 100%;
+        text-align: center;
+        color: gold;
+        font-size: 24px;
+        font-weight: bold;
+        padding-top: 20px;
+    }
+    video {
+        display: block; /* Removes bottom margin/gap */
+        max-width: 90%;
+        max-height: 80vh; /* Adjusts the video size to the viewport */
+    }
+    #nextButton {
+        position: absolute;
+        bottom: 20px;
+        left: 50%;
+        transform: translateX(-50%);
+        padding: 10px 20px;
+        font-size: 16px;
+        cursor: pointer;
+    }
+</style>
+</head>
+<body>
+
+<div id="title">Art That I Like</div>
+
+<video id="myVideo" controls autoplay loop>
+  <source src="index.mp4" type="video/mp4">
+  Your browser does not support the video tag.
+</video>
+
+<button id="nextButton">Next</button>
+
+<script>
+    const video = document.getElementById('myVideo');
+
+    video.onended = function() {
+        // Stops the video from looping after playing once
+        video.pause();
+        video.currentTime = video.duration; // Make sure to stay on the last frame
+    };
+
+    const nextButton = document.getElementById('nextButton');
+    nextButton.onclick = function() {
+        window.location.href = '1.html'; // Redirects to 1.html when the button is clicked
+    };
+</script>
+
+</body>
+</html>
